@@ -9,6 +9,8 @@
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&family=Josefin+Slab');
+
 /**************/
 /* BASE RULES */
 /**************/
@@ -19,7 +21,7 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 18px/1.4 'Roboto Slab';
   color: $darkGray;
 }
 
@@ -31,7 +33,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  font-family: 'Roboto Slab';
   color: $darkerGray;
   font-weight: bold;
 
