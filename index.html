@@ -1,18 +1,76 @@
 ---
 layout: default
+title: Space Scribbles
+css: home.css
+nomargin: true
 ---
+<div class="p1 pt-28 pb-36">
+  <div class="badges">
+    <div class="badge" id="badge1"><span>Festival Winner</span></div>
+    <div class="badge" id="badge2"><span>Best Author</span></div>
+    <div class="badge" id="badge3"><span>English Nobel Prize Winner</span></div>
+  </div>
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+  <h1 transition-style="in:wipe:right" class="uppercase mt-12 text-center"><span>Space</span><span>Scribbles</span></h1>
+  <h2 class="uppercase text-center">The future of humanity in literature</h2>
+</div>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+<div class="carousel w-full">
+  <div id="slide1" class="carousel-item relative w-full">
+    <div class="review">
+      <span class="content">"I'm a critic who has evaluated your work and found no probelms."</span>
+      <span class="author">Reddy Anna</span>
+    </div>
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide3" class="btn btn-circle">❮</a> 
+      <a href="#slide2" class="btn btn-circle">❯</a>
+    </div>
+  </div> 
+  <div id="slide2" class="carousel-item relative w-full">
+    <div class="review">
+      <span class="content">"Mr. Vivaan your blogs are THE best pieces of text I've read my entire life."</span>
+      <span class="author">Thomas Shelby</span>
+    </div>
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide1" class="btn btn-circle">❮</a> 
+      <a href="#slide3" class="btn btn-circle">❯</a>
+    </div>
+  </div> 
+  <div id="slide3" class="carousel-item relative w-full">
+    <div class="review">
+      <span class="content">"WOW VIVAAN UR BLOGS ARE SO GOOOOOOOOOOOOOOOOOOOOOOOOD"</span>
+      <span class="author">Narendra Washington</span>
+    </div>
+    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide2" class="btn btn-circle">❮</a> 
+      <a href="#slide1" class="btn btn-circle">❯</a>
+    </div>
+  </div>
+</div>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+<div class="p3 px-80 py-24">
+  <div class="credits p-8">
+    <span class="role">Director</span>
+    <span class="person">Vivaan Parashar</span>
+  </div>
+  <div class="credits">
+    <span class="role">Publisher</span>
+    <span class="person">Vivaan Parashar</span>
+  </div>
+  <div class="credits">
+    <span class="role">Prithvi DCM</span>
+    <span class="person">Vivaan Parashar</span>
+  </div>
+  <div class="credits">
+    <span class="role">Website Creator</span>
+    <span class="person">Vivaan Parashar</span>
+  </div>
+  <div class="credits">
+    <span class="role">Editor</span>
+    <span class="person">Vivaan Parashar</span>
+  </div>
+  <div class="credits">
+    <span class="role">Prithvi DCM</span>
+    <span class="person">Vivaan Parashar</span>
+  </div>
 </div>

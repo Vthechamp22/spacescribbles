@@ -1,0 +1,121 @@
+---
+---
+
+@import 'variables';
+@use 'sass:color'
+
+@keyframes wipe {
+    from { width: 0; }
+}
+
+.p1 {
+    background-image: url('{{ site.baseurl }}/assets/images/space3.jpg'), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background-attachment: fixed;
+    background-position: center center;
+    background-blend-mode: overlay;
+}
+
+.badges {
+    display: flex;
+    justify-content: space-around;
+    margin: auto 25%;
+    
+    .badge {
+        background: url('{{ site.baseurl}}/assets/images/wreath.svg');
+        font-family: 'Josefin Slab', sans-serif;
+        font-size: 24px;
+        line-height: 1em;
+        text-align: center;
+        height: 150px;
+        width: 25%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+
+        span {
+            width: 70%;
+        }
+    }
+}
+
+h1 {
+    font-family: 'Josefin Slab';
+    font-size: 101px !important;
+    letter-spacing: 0.15em;
+    animation-duration: 5s !important;
+    animation-timing-function: ease-in-out;
+    
+    span:nth-child(1) {
+        color: $black;
+    }
+    
+    span:nth-child(2) {
+        color: $mid1;
+    }
+}
+
+h2 {
+    margin-top: -2em !important;
+    font-size: 17px;
+    letter-spacing: 0.7em;
+    color: white;
+    font-family: 'Josefin Slab';
+}
+
+.review {
+    height: 10em;
+    background: $sliderbg;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Josefin Slab', serif;
+    font-size: 35px;
+
+    .author {
+        font-size: 17px;
+        letter-spacing: 0.35em;
+    }
+
+    .content {
+        width: 30%;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+}
+
+.p3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background: url("{{ site.baseurl }}/assets/images/space2.jpg"), linear-gradient(rgba(black, 0.5), rgba(black, 0.5));
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    // background: ;
+
+    .role, .person {
+        text-transform: uppercase;
+    }
+
+    .credits {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // margin: 1em;
+    
+        .role {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            color: $light1;
+        }
+    
+        .person {
+            color: $light1;
+            font-family: 'Josefin Slab';
+            font-size: 60px;
+            text-align: center;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="night">
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
@@ -10,42 +10,49 @@
     <![endif]-->
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Josefin+Slab|Bebas+Neue|Montserrat"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.19.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/transition-style">
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    {% if page.css %}
+      {% for stylesheet in page.css %}
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/scss/{{ stylesheet }}">
+      {% endfor %}
+    {% endif %}
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
+    <div class="navbar bg-base-100">
+      <div class="flex-1">
+        <a class="ml-3 uppercase text-xl" id="logotext" href="{{ site.baseurl }}/">Space Scribbles</a>
+      </div>
+      <div class="flex-none">
+        <ul class="menu menu-horizontal p-0">
+          <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+        </ul>
       </div>
     </div>
-
-    <div id="main" role="main" class="container">
+    {% if page.nomargin %}
       {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
+    {% else %}
       <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
+        {{ content }}
       </div>
-    </div>
+    {% endif %}
 
-    {% include analytics.html %}
+    <footer class="footer items-center p-4 bg-neutral text-neutral-content">
+      <div class="items-center grid-flow-col">
+        <p>Copyright Space Scribbles © 2022 - All right reserved</p>
+      </div> 
+      <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+        <a href="https://github.com/Vthechamp22/"><i class="fa-brands fa-xl fa-github"></i></a> 
+        <a href="https://twitter.com/vthechamp22"><i class="fa-brands fa-xl fa-twitter"></i></a>
+        <a href="https://www.instagram.com/whos_v1vaan/"><i class="fa-brands fa-xl fa-instagram"></i></a>
+      </div>
+    </footer>
   </body>
 </html>

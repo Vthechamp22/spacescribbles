@@ -1,0 +1,35 @@
+---
+---
+
+@import 'variables';
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+.card {
+    background: $dark2;
+    color: $light1;
+
+    h2 {
+        color: $light1 !important;
+        font-family: 'Montserrat', 'Roboto', sans-serif;
+        justify-content: center;
+        font-size: 26px;
+        font-weight: 400;
+    }
+
+    p {
+        font-family: 'Open Sans';
+        text-align: center;
+        font-size: 16px;
+        color: $light3;
+    }
+}
+
+.container {
+    
+}

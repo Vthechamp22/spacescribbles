@@ -9,7 +9,6 @@
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&family=Josefin+Slab');
 
 /**************/
 /* BASE RULES */
@@ -20,7 +19,7 @@ html {
 }
 
 body {
-	background: $white;
+  background: $white;
   font: 18px/1.4 'Roboto Slab';
   color: $darkGray;
 }
@@ -36,11 +35,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto Slab';
   color: $darkerGray;
   font-weight: bold;
-
+  
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
-
+  
   @include mobile {
     line-height: 1.4;
   }
@@ -136,12 +135,12 @@ img {
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /*********************/
@@ -159,7 +158,7 @@ img {
 .masthead {
   padding: 20px 0;
   border-bottom: 1px solid $lightGray;
-
+  
   @include mobile {
     text-align: center;
   }
@@ -170,13 +169,13 @@ img {
   width: 70px;
   height: 70px;
   margin-right: 15px;
-
+  
   @include mobile {
     float: none;
     display: block;
     margin: 0 auto;
   }
-
+  
   img {
     border-radius: 5px;
   }
@@ -184,7 +183,7 @@ img {
 
 .site-info {
   float: left;
-
+  
   @include mobile {
     float: none;
     display: block;
@@ -206,7 +205,7 @@ img {
   margin: -5px 0 0 0;
   color: $gray;
   font-size: 16px;
-
+  
   @include mobile {
     margin: 3px 0;
   }
@@ -217,21 +216,21 @@ nav {
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
   font-size: 18px;
-
+  
   @include mobile {
     float: none;
     margin-top: 9px;
     display: block;
     font-size: 16px;
   }
-
+  
   a {
     margin-left: 20px;
     color: $darkGray;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
-
+    
     @include mobile {
       margin: 0 10px;
       color: $blue;
@@ -262,11 +261,11 @@ nav {
     font-size: 22px;
     font-style: italic;
   }
-
+  
   .comments {
     margin-top: 10px;
   }
-
+  
   .read-more {
     text-transform: uppercase;
     font-size: 15px;
@@ -284,6 +283,18 @@ footer {
   padding: 20px 0;
   text-align: center;
 }
+
+.navbar {
+  color: $mid2;
+  padding: 10px 40px !important;
+  font-family: 'Roboto';
+
+  #logotext {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 35px;
+  }
+}
+
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
