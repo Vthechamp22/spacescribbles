@@ -62,28 +62,6 @@ h2 {
     font-family: 'Josefin Slab';
 }
 
-.review {
-    height: 10em;
-    background: $sliderbg;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Josefin Slab', serif;
-    font-size: 35px;
-
-    .author {
-        font-size: 17px;
-        letter-spacing: 0.35em;
-    }
-
-    .content {
-        width: 30%;
-        text-align: center;
-        margin-bottom: 1em;
-    }
-}
 
 .p3 {
     display: grid;
@@ -93,7 +71,7 @@ h2 {
     background-blend-mode: overlay;
     background-attachment: fixed;
     // background: ;
-
+    
     .role, .person {
         text-transform: uppercase;
     }
@@ -118,4 +96,51 @@ h2 {
             text-align: center;
         }
     }
+}
+
+$button_margin: 6em;
+
+.swiper {
+    width: 100%;
+    height: 300px;
+
+    .review {
+        height: 10em;
+        background: $sliderbg;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Josefin Slab', serif;
+        font-size: 35px;
+        
+        .content {
+            width: 45%;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        
+        .author {
+            font-size: 17px;
+            letter-spacing: 0.35em;
+            margin-bottom: 2em;
+        }
+    }
+
+    .swiper-button-prev {
+        margin-left: $button_margin;
+    }
+
+    .swiper-button-next {
+        // background: url("{{ site.baseurl }}/assets/images/nav_next.svg") !important;
+        margin-right: $button_margin;
+    }
+    
+    .swiper-btn{
+        color: black;
+    }
+    
+
+
 }

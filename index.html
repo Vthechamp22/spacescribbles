@@ -15,37 +15,40 @@ nomargin: true
   <h2 class="uppercase text-center">The future of humanity in literature</h2>
 </div>
 
-<div class="carousel w-full">
-  <div id="slide1" class="carousel-item relative w-full">
-    <div class="review">
-      <span class="content">"I'm a critic who has evaluated your work and found no probelms."</span>
-      <span class="author">Reddy Anna</span>
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+      <div class="review">
+        <span class="content">"I'm a critic who has evaluated your work and found no probelms."</span>
+        <span class="author">Reddy Anna</span>
+        </div>
     </div>
-    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide3" class="btn btn-circle">❮</a> 
-      <a href="#slide2" class="btn btn-circle">❯</a>
+    <div class="swiper-slide">
+      <div class="review">
+        <span class="content">"Mr. Vivaan your blogs are THE best pieces of text I've read my entire life."</span>
+        <span class="author">Thomas Shelby</span>
+        </div>
     </div>
-  </div> 
-  <div id="slide2" class="carousel-item relative w-full">
-    <div class="review">
-      <span class="content">"Mr. Vivaan your blogs are THE best pieces of text I've read my entire life."</span>
-      <span class="author">Thomas Shelby</span>
+    <div class="swiper-slide">
+      <div class="review">
+        <span class="content">"WOW VIVAAN UR BLOGS ARE SO GOOOOOOOOOOOOOOOOOOOOOOOOD"</span>
+        <span class="author">Narendra Washington</span>
+        </div>
     </div>
-    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide1" class="btn btn-circle">❮</a> 
-      <a href="#slide3" class="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  <div id="slide3" class="carousel-item relative w-full">
-    <div class="review">
-      <span class="content">"WOW VIVAAN UR BLOGS ARE SO GOOOOOOOOOOOOOOOOOOOOOOOOD"</span>
-      <span class="author">Narendra Washington</span>
-    </div>
-    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide2" class="btn btn-circle">❮</a> 
-      <a href="#slide1" class="btn btn-circle">❯</a>
-    </div>
+    ...
   </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-btn swiper-button-prev"></div>
+  <div class="swiper-btn swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <!-- <div class="swiper-scrollbar"></div> -->
 </div>
 
 <div class="p3 px-80 py-24">
@@ -74,3 +77,22 @@ nomargin: true
     <span class="person">Vivaan Parashar</span>
   </div>
 </div>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+</script>
