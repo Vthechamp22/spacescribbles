@@ -7,10 +7,10 @@ nomargin: true
 <div class="posts m-20">
     {% for post in site.posts %}
         <div class="card w-96 rounded-md">
-            <figure><img src="{{ site.baseurl }}/{{ post.cover_img }}" alt="{{ post.title }}" /></figure>
+            <figure class="crop"><img src="{{ site.baseurl }}/{{ post.cover_img }}" alt="{{ post.title }}" /></figure>
             <div class="card-body">
             <h2 class="card-title">{{ post.title }}</h2>
-            <p >{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+            <p >{{ post.content | strip_html | truncatewords: 40 }}</p>
             <div class="mt-10 card-actions justify-end">
                 <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-primary">Read the rest!</a>
             </div>

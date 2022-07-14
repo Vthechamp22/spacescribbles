@@ -12,6 +12,11 @@ body {
     padding: 5em;
     margin-top: 1em;
 
+    img {
+        margin: auto;
+        height: 25em;
+    }
+
     p {
         margin: 1em auto !important;
     }
@@ -26,4 +31,15 @@ h2.author {
 h1.title {
     font-family: 'Josefin Slab';
     font-size: 40px;
+}
+
+h3 {
+    font-size: 25px !important;
+    font-family: 'Montserrat';
+    font-weight: 800 !important;
+}
+
+.tooltip {
+    text-decoration: underline;
+    text-decoration-style: dotted;
 }

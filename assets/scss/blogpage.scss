@@ -28,6 +28,12 @@
         font-size: 16px;
         color: $light3;
     }
+
+
+    .crop {
+        height: 15em;
+        overflow: hidden;
+    }
 }
 
 .container {
