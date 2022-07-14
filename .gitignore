@@ -9,5 +9,7 @@ Gemfile
 Gemfile.lock
 node_modules
 package.json
-# necessary for vscode tailwind intellisense to work
+
+# VSCode
 tailwind.config.js
+.vscode
